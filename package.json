@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@anthropic-ai/claude-code": "^2.1.92",
+    "@supabase/supabase-js": "^2.45.4",
     "@fontsource/space-grotesk": "^5.2.10",
     "autoprefixer": "^10.4.27",
     "axios": "^1.7.2",
