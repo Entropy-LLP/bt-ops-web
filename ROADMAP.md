@@ -5,7 +5,7 @@
 
 **Role:** One operator, one web console, total visibility across all drivers/fleets/trips. Touches the flow only on exceptions (KYC approval, disputes, manual overrides). Self-serve everywhere else.
 
-**Status legend:** ✅ done · 🟡 partial · ⬜ to do · ⛔ stub
+**Status legend:** ✅ done · 🟡 partial · ⬜ to do · ⛔ stub · `(Wx-y)`/`(D-z)` tags = Entropy PMO work-item refs (auto-synced to the tracker — keep them on the line when you flip a checkbox)
 
 ---
 
@@ -23,11 +23,11 @@
 - ⛔ Portal hardcoded to one fleet ("Surya Fleet") — no tenant scoping.
 
 ## ⬜ To do (MVP / P0)
-- ⬜ **Real auth + RBAC** (ops staff only) — middleware/route guards; separate the internal console from the external portal boundary.
-- ⬜ **BFF/proxy layer** to the backend services (replace all mock data with real calls).
-- ⬜ **KYC approval queue** with real handlers: see SurePass + Vahan results, approve/reject, issue **Verified** badge.
-- ⬜ **Live trip board:** every in-progress trip with live position / status / ETA / halts (fed by bt-tracking-service).
-- ⬜ **Users / Fleets / Trucks** management: search, view, suspend; show fleet→driver→truck affiliations.
+- ⬜ **Real auth + RBAC** (ops staff only) — middleware/route guards; separate the internal console from the external portal boundary. (W1-4)
+- ⬜ **BFF/proxy layer** to the backend services (replace all mock data with real calls). (W2-10)
+- ⬜ **KYC approval queue** with real handlers: see SurePass + Vahan results, approve/reject, issue **Verified** badge. (W2-9)
+- ⬜ **Live trip board:** every in-progress trip with live position / status / ETA / halts (fed by bt-tracking-service). (W8-2)
+- ⬜ **Users / Fleets / Trucks** management: search, view, suspend; show fleet→driver→truck affiliations. (W2-11)
 - ⬜ **Exceptions / disputes view:** open a trip's full state (negotiation log + GPS trail + checkpoints + ledger + payment) and **manually override** — reassign on no-show/breakdown, trigger refund, force payout, edit a stuck booking.
 - ⬜ Tenant scoping for the fleet portal (fleet identity from auth).
 - ⬜ Fix standalone build (Dockerfile references missing `output:'standalone'`).
